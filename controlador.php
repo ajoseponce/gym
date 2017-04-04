@@ -32,6 +32,7 @@ $action = $_REQUEST["action"];
             $actividadesCliente= $consultas->getRelacionByIDCliente($id_persona);
             $result= $consultas->getPersonasbyid($id_persona);
             /*********************/
+            $productos= $consultas->getproductos();
             $proviene= $consultas->getProviene();
 
             $formulario='forms/form_personas.php';
