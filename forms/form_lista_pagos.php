@@ -50,6 +50,7 @@
                         <table class="table table-striped table-bordered table-hover" >
                             <thead>
                             <tr>
+                                <th></th>
                                 <th>Cliente</th>
                                 <th>Actividad</th>
                                 <th>Periodo</th>
@@ -63,11 +64,14 @@
 
                             <tbody>
                             <?php if($result){
+                                $cant=0;
                                 foreach ($result as $v) {
                                     $suma=$v->monto+$suma;
+                                    $cant++;
                                     ?>
                                     <tr class="odd gradeX">
 
+                                        <td><?php echo $cant; ?></td>
                                         <td><?php echo $v->cliente; ?></td>
                                         <td><?php echo $v->actividad; ?></td>
                                         <td><?php echo $v->periodo; ?></td>
@@ -80,7 +84,7 @@
                                     </tr>
                                 <?php }} ?>
                             <tr class="odd gradeX">
-
+                                <td></td>
                                 <td>&nbsp;</td>
                                 <td>&nbsp;</td>
                                 <td>&nbsp;</td>

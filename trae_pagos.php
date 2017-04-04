@@ -8,6 +8,7 @@ $result = $consultas->getPagos($_REQUEST['fecha_desde'],$_REQUEST['fecha_hasta']
 <table class="table table-striped table-bordered table-hover" >
     <thead>
     <tr>
+        <th></th>
         <th>Cliente</th>
         <th>Actividad</th>
         <th>Periodo</th>
@@ -21,11 +22,13 @@ $result = $consultas->getPagos($_REQUEST['fecha_desde'],$_REQUEST['fecha_hasta']
 
     <tbody>
     <?php if($result){
+        $cant=0;
         foreach ($result as $v) {
+            $cant++;
             $suma=$v->monto+$suma;
             ?>
             <tr class="odd gradeX">
-
+                <td><?php echo $cant; ?></td>
                 <td><?php echo $v->cliente; ?></td>
                 <td><?php echo $v->actividad; ?></td>
                 <td><?php echo $v->periodo; ?></td>
@@ -39,6 +42,7 @@ $result = $consultas->getPagos($_REQUEST['fecha_desde'],$_REQUEST['fecha_hasta']
         <?php }} ?>
     <tr class="odd gradeX">
 
+        <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>

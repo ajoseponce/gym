@@ -29,7 +29,6 @@
 
                 <th>Cliente</th>
                 <th>Producto</th>
-
                 <th>&nbsp;</th>
             </tr>
             </thead>
